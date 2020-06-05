@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Test dei Colori di Luscher</title>
+        <style>
+            
+            #maincontainer {text-align: center;}
+            
+            h1{font-family: sans-serif;}
+            
+            p {font-family: sans-serif;}
+            
+            
+            
+            #indicazioni{
+                display: none;
+                font-family: sans-serif;
+            }
+            
+            .card {
+                border: 1px solid black;
+                border-radius: 5%;
+                height: 200px ;
+                width: 11% ;
+                display: inline-block;
+                float: none;
+                margin: 5px;
+            }
+            
+            .selezione1 {display: none;}
+            
+            #A1 {background: #757166;}
+            #B1 {background: #1b1b5b;}
+            #C1 {background: #254842;}
+            #D1 {background: #df4523;}
+            #E1 {background: #f3d93a;}
+            #F1 {background: #9c234e;}
+            #G1 {background: #af5e29;}
+            #H1 {background: black;}
+            
+            .selezione2 {display: none;}
+            
+            #A2 {background: #757166;}
+            #B2 {background: #1b1b5b;}
+            #C2 {background: #254842;}
+            #D2 {background: #df4523;}
+            #E2 {background: #f3d93a;}
+            #F2 {background: #9c234e;}
+            #G2 {background: #af5e29;}
+            #H2 {background: black;}
+            
+            #result {display: none;}
+            
+            #rp {width: 70%; display: none; display: inline-block; font-family: sans-serif;}
+            #rx {width: 70%; display: none; display: inline-block; font-family: sans-serif;}
+            
+            
+        </style>
+        <script src="librerie/jquery-3.4.1.min.js"></script>
+        <script src="librerie/sheetrock.min.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <div id="maincontainer">
+        <h1 >Test dei colori di Luscher</h1>
+        
+        <p id="descrizione">Il test dei colori è stato ideato nel 1949 dallo svizzero Max Luscher.<br>
+            Esso ha trovato subito una larga diffusione su scala mondiale per i pregi specifici che lo contraddistinguono
+            da altri test proiettivi:<br>
+            rapidità e semplicità di somministrazione, validità universale, ricchezza e completezza dei dati forniti,
+            buona attendibilità.<br> I settori di utilizzazione comprendono: clinica, selezione del personale, orientamento professionale, etnologia, pedagogia.</p><br><br>
+        
+        <input type="button" value="Inizia il Test" id="start" onclick="inizioTest(this.id)" />
+        
+        <h2 id="indicazioni">Seleziona i colori in ordine di preferenza</h2>
+        
+<!--        selezione "fasulla"-->
+        
+        <div class="selezione1">
+            <div class="card card11" onclick="hideThenDisplay(this.id);" id="A1"></div>
+            <div class="card card21" onclick="hideThenDisplay(this.id);" id="B1"></div>
+            <div class="card card31" onclick="hideThenDisplay(this.id);" id="C1"></div>
+            <div class="card card41" onclick="hideThenDisplay(this.id);" id="D1"></div>
+            <div class="card card51" onclick="hideThenDisplay(this.id);" id="E1"></div>
+            <div class="card card61" onclick="hideThenDisplay(this.id);" id="F1"></div>
+            <div class="card card71" onclick="hideThenDisplay(this.id);" id="G1"></div>
+            <div class="card card81" onclick="hideThenDisplay(this.id);" id="H1"></div>
+        </div>
+        
+<!--        selezione 'autentica'-->
+        
+        <div class="selezione2">
+            <div class="card card12" onclick="selezione(this.id);" id="A2"></div>
+            <div class="card card22" onclick="selezione(this.id);" id="B2"></div>
+            <div class="card card32" onclick="selezione(this.id);" id="C2"></div>
+            <div class="card card42" onclick="selezione(this.id);" id="D2"></div>
+            <div class="card card52" onclick="selezione(this.id);" id="E2"></div>
+            <div class="card card62" onclick="selezione(this.id);" id="F2"></div>
+            <div class="card card72" onclick="selezione(this.id);" id="G2"></div>
+            <div class="card card82" onclick="selezione(this.id);" id="H2"></div>
+        </div><br><br>
+        <input type="button" value="Elabora Risultato" id="result" onclick="result();"/><br><br>
+        
+        <div id="rp"></div><br><br>
+        <div id="rx"></div>
+            
+        
+            
+       </div>
+        
+    </body>
+</html>
